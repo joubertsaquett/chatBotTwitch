@@ -19,6 +19,7 @@
   "homepage": "https://github.com/joubertsaquett/chatBotTwitch#readme",
   "dependencies": {
     "dotenv": "^9.0.2",
+    "emoteglobals": "^2.2.1",
     "tmi.js": "^1.8.3"
   }
 }

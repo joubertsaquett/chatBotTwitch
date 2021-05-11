@@ -1,7 +1,8 @@
 const tmi = require('tmi.js');
 require('dotenv').config()
+const emote = require('emoteglobals');
 
-console.log(`BOT ${process.env.BOT} ESTÁ SENDO INICIADO!`);
+console.log(`BOT ${process.env.BOT} ESTÁ SENDO INICIADO! ${emote.icon[1].icon}`);
 
 // Definir opções de configuração
 const opts = {
