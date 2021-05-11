@@ -37,9 +37,22 @@ function entrouNoChat(endereco, porta) {
   console.log(`* Bot entrou no chat da live pelo endereço: ${endereco}:${porta}`);
 }
 
+function messageV2(channel, tags, message, self){
+	if(self || !message.startsWith('!')) return;
+
+	const args = message.slice(1).split(' ');
+	const command = args.shift().toLowerCase();
+
+	if(command === 'echo') {
+		client.say(channel, `@${tags.username}, you said: "${args.join(' ')}"`);
+	}
+}
+
 // Registra nossas funções
 client.on('message', message);
+// client.on('message', messageV2);
 client.on('connected', entrouNoChat);
+
 
 // Connecta na Twitch:
 client.connect();
